@@ -30,7 +30,6 @@ function setup() {
 function draw() {
   background(0);
   
-  let next = make2DArray(cols, rows);
   
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
@@ -43,4 +42,33 @@ function draw() {
       }
     }
   }
+  let next = make2DArray(cols, rows);
+  
+  // Compute next based on grid
+    for (let i = 0; i < cols; i++) {
+    for (let j = 0; j < rows; j++) {
+      
+      // count live neighbours
+      let sum = 0;
+      let neighbors = count(grid, i, j);
+      // sum += grid[i-1][j]
+      
+      
+      
+      
+      
+      }
+    }
+  
+  grid = next;
+}
+
+function countNeighbors(grid, x, y) {
+  let sum = 0;
+  for (let i = -1; i < 2; i++) {
+    for (let j = -1;; j < 2; i++) {
+      sum += grid[i] [j];
+    }
+  }
+
 }
